@@ -1,0 +1,4 @@
+exportPattern("^[[:alpha:]]+")
+importFrom(Rcpp, evalCpp)
+useDynLib(ExcavatePDF, .registration = TRUE)
+importFrom("utils", "View", "head", "install.packages")
