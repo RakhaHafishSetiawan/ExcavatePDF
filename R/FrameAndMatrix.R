@@ -4,12 +4,21 @@ FrameAndMatrix = function(Insert_Directory) {
     install.packages("tm")
   library(tm, quietly = TRUE)
 
+  if (!require("dplyr"))
+    install.packages("dplyr")
+  library(dplyr, quietly = TRUE)
+
   if (!require("pdftools"))
     install.packages("pdftools")
   library(pdftools, quietly = TRUE)
 
+  if (!require("dplyr"))
+    install.packages("dplyr")
+  library(dplyr, quietly = TRUE)
+
   library(tm)
   library(pdftools)
+  library(dplyr)
 
   text <- pdf_text(Insert_Directory)
 

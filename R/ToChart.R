@@ -17,6 +17,7 @@ ToChart  = function(DTF){
   library(ggplot2, quietly = TRUE)
 
   library(dplyr)
+  library(dplyr)
   library(magrittr)
   library(ggplot2)
 
