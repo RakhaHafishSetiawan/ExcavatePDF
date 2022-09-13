@@ -38,7 +38,9 @@ FrameAndMatrix = function(Insert_Directory) {
   occurences <<- sort(occurences, decreasing = TRUE)
 
   DTF <<- data.frame(names(occurences), occurences)
+
   View(DTF)
+  View(occurences)
 
   print("The data frame and data matrix has been stored in your global environment as DTF and occurences")
 

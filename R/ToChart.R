@@ -16,6 +16,7 @@ ToChart  = function(DTF){
     install.packages("ggplot2")
   library(ggplot2, quietly = TRUE)
 
+  #Author Note: codes in line 20 and 21 are duplicated on purpose
   library(dplyr)
   library(dplyr)
   library(magrittr)
