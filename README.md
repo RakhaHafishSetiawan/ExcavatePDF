@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/102712597/190895952-b02c8bab-f25c-46ac-8db6-18c8f5c643b2.png"/>
+  <img src="https://user-images.githubusercontent.com/102712597/190896296-270c7966-da6f-4c38-8051-9c5208834ed0.png"/>
 </p>
 
 # ExcavatePDF
