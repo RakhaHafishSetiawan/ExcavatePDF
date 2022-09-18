@@ -10,13 +10,13 @@ to reach optimum efficiency at collecting and processing unstructured data from 
 
 ## Installation
 
-Install ExcavatePDF with devtools
-
 ```r
-   if (!require("devtools")) 
-    install.packages("devtools")
-
-  devtools::install_github("RakhaHafishSetiawan/ExcavatePDF")
+#Install devtools package
+if (!require("devtools")) 
+ install.packages("devtools")
+  
+#Install package with devtools
+devtools::install_github("RakhaHafishSetiawan/ExcavatePDF")
 ```
     
 ## Function Call
