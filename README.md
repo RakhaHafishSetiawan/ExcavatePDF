@@ -1,3 +1,6 @@
+![1662996035062 (2)](https://user-images.githubusercontent.com/102712597/190894485-5e412227-ccfe-4ad0-88ed-85d6910786a6.png)
+
+
 # ExcavatePDF
 
 This package includes a collection of libraries such as "tm", "pdftools", "wordcloud", and "dplyr" that are programmed to be automated in order
