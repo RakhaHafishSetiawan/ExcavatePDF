@@ -56,6 +56,7 @@ the user to convert the the available data frame (DTF) into a column chart.
 
 
 ## Credits
+This R package uses the following open source packages:
 
  - [pdftools](https://github.com/ropensci/pdftools)
  - [tm](https://cran.r-project.org/web/packages/tm/index.html)
