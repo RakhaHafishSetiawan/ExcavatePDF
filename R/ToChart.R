@@ -22,16 +22,39 @@ ToChart  = function(DTF){
   library(magrittr)
   library(ggplot2)
 
-  amount <<- readline(prompt = "Enter Amount of Top Occurences ")
-  amount <<- as.integer(amount)
+  agree <<- readline(prompt = "Would you like to add colors? (yes or no) ")
 
-  DTF %>%
-    select(everything()) %>%
-    head(amount) %>%
-    ggplot(aes(names.occurences., occurences)) +
-    geom_col(fill = "#0039a6") +
-    labs(x = "Terms",
-         y = "Frequencies") +
-    theme_classic()
+  if(agree == "no") {
+
+    amount <<- readline(prompt = "Enter Amount of Top Occurences ")
+    amount <<- as.integer(amount)
+
+    DTF %>%
+      select(everything()) %>%
+      head(amount) %>%
+      ggplot(aes(names.occurences., occurences)) +
+      geom_col() +
+      labs(x = "Terms",
+           y = "Frequencies") +
+      theme_classic()
+
+  } else {
+
+    choice <<- readline(prompt = "What color would you like to add? ")
+
+    amount <<- readline(prompt = "Enter Amount of Top Occurences ")
+    amount <<- as.integer(amount)
+
+    DTF %>%
+      select(everything()) %>%
+      head(amount) %>%
+      ggplot(aes(names.occurences., occurences)) +
+      geom_col(fill = choice) +
+      labs(x = "Terms",
+           y = "Frequencies") +
+      theme_classic()
+
+  }
+
 
 }
