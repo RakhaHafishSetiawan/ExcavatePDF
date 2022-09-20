@@ -53,7 +53,7 @@ the user to convert the the available data frame (DTF) into a column chart.
 ## Version History
 
 * 0.1.2
-    * Added color option to ToChart()
+    * Added color option prompt to ToChart()
     
 * 0.1.1
     * Added data matrix view 
