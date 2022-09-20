@@ -57,7 +57,7 @@ the user to convert the the available data frame (DTF) into a column chart.
     * Added color option prompt to ToChart()
     
 * 0.1.1
-    * Added data matrix view 
+    * Added data matrix view to FrameAnd Matrix()
     * Bug fix on loading dplyr
     
 * 0.1.0
