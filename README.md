@@ -31,6 +31,7 @@ the user to convert the the available data frame (DTF) into a column chart.
 
 
 ```r
+  # Turn directory front slash into back slash
   ExcavatePDF::FrameAndMatrix(Insert_Directory)
 
 ```
