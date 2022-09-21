@@ -7,7 +7,7 @@ Maintainer: Rakha Hafish Setiawan <rakha.hafish@gmail.com>
 Description: This package is a collection of libraries that are automated
     to allow the ease of the user to obtain a data frame and a data matrix
     from a single pdf file, as well as plotting a chart and a wordcloud.
-License: MIT 
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: Rcpp (>= 1.0.9)
