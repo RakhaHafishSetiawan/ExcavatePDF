@@ -31,6 +31,7 @@ the user to convert the the available data frame (DTF) into a column chart.
 
 
 ```r
+  # Turn directory front slash into back slash
   ExcavatePDF::FrameAndMatrix(Insert_Directory)
 
 ```
@@ -39,7 +40,7 @@ the user to convert the the available data frame (DTF) into a column chart.
 
 
 ```r
-  ExcavatePDF:: ToCloud(occurences)
+  ExcavatePDF::ToCloud(occurences)
 
 ```
 
@@ -47,9 +48,22 @@ the user to convert the the available data frame (DTF) into a column chart.
 
 
 ```r
-  ExcavatePDF:: ToChart(DTF)
+  ExcavatePDF::ToChart(DTF)
 
 ```
+## Version History
+
+* 0.1.2
+    * Added color option prompt to ToChart()
+    
+* 0.1.1
+    * Added data matrix view to FrameAnd Matrix()
+    * Bug fix on loading dplyr
+    
+* 0.1.0
+    * Initial release
+
+
 ## Authors
 
 - [@RakhaHafishSetiawan](https://github.com/RakhaHafishSetiawan)
