@@ -53,6 +53,9 @@ the user to convert the the available data frame (DTF) into a column chart.
 ```
 ## Version History
 
+* 0.1.3
+    * Added Indonesian Stopwords
+    
 * 0.1.2
     * Added color option prompt to ToChart()
     
