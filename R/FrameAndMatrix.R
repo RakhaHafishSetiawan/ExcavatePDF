@@ -37,7 +37,7 @@ FrameAndMatrix = function(Insert_Directory) {
 
   } else {
 
-    textCorpus <<- tm_map(textCorpus, removeWords, NewStop)
+    textCorpus <<- tm_map(textCorpus, removeWords, IDN)
 
   }
 
