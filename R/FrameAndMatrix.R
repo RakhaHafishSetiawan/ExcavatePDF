@@ -28,18 +28,8 @@ FrameAndMatrix = function(Insert_Directory) {
   textCorpus <<- tm_map(textCorpus, removePunctuation)
   textCorpus <<- tm_map(textCorpus, stripWhitespace)
   textCorpus <<- tm_map(textCorpus, removeNumbers)
+  textCorpus <<- tm_map(textCorpus, removeWords, stopwords("en"))
 
-  LANG <<- readline(prompt = "English or Indonesia?")
-
-  if(LANG == "English"){
-
-    textCorpus <<- tm_map(textCorpus, removeWords, stopwords("en"))
-
-  } else {
-
-    textCorpus <<- tm_map(textCorpus, removeWords, IDN)
-
-  }
 
   DTM <<- DocumentTermMatrix(textCorpus)
   DTM <<- as.matrix(DTM)

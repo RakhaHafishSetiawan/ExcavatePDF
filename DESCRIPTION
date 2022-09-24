@@ -1,7 +1,7 @@
 Package: ExcavatePDF
 Type: Package
 Title: PDF File Text Miner
-Version: 0.1.3
+Version: 0.1.2
 Authors@R: person("Rakha Hafish", "Setiawan", email = "rakha.hafish@gmail.com", role = c("aut", "cre"))
 Maintainer: Rakha Hafish Setiawan <rakha.hafish@gmail.com>
 Description: This package is a collection of libraries that are automated
