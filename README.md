@@ -54,13 +54,13 @@ the user to convert the the available data frame (DTF) into a column chart.
 ## Version History
 
 * 0.1.3
-    * Added Indonesian Stopwords
+    * Added tm's stopword language selection to FrameAndMatrix()
     
 * 0.1.2
     * Added color option prompt to ToChart()
     
 * 0.1.1
-    * Added data matrix view to FrameAnd Matrix()
+    * Added data matrix view to FrameAndMatrix()
     * Bug fix on loading dplyr
     
 * 0.1.0
