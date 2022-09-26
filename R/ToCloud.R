@@ -1,5 +1,4 @@
-ToCloud = function(occurences) {
-
+ToCloud = function(DTM) {
   if (!require("wordcloud"))
     install.packages("wordcloud")
   library(wordcloud, quietly = TRUE)
@@ -15,5 +14,5 @@ ToCloud = function(occurences) {
   width <<- readline(prompt = "Enter Wordcloud Width ")
   width <<- as.integer(width)
 
-  wordcloud(head(names(occurences), value), head(occurences, value), scale = c(height, width))
+  wordcloud(head(names(DTM), value), head(DTM, value), scale = c(height, width))
 }

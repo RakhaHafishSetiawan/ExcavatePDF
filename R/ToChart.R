@@ -4,10 +4,6 @@ ToChart  = function(DTF){
     install.packages("dplyr")
   library(dplyr, quietly = TRUE)
 
-  if (!require("dplyr"))
-    install.packages("dplyr")
-  library(dplyr, quietly = TRUE)
-
   if (!require("magrittr"))
     install.packages("magrittr")
   library(magrittr, quietly = TRUE)
@@ -16,8 +12,6 @@ ToChart  = function(DTF){
     install.packages("ggplot2")
   library(ggplot2, quietly = TRUE)
 
-  #Author Note: codes in line 20 and 21 are duplicated on purpose
-  library(dplyr)
   library(dplyr)
   library(magrittr)
   library(ggplot2)
@@ -32,7 +26,7 @@ ToChart  = function(DTF){
     DTF %>%
       select(everything()) %>%
       head(amount) %>%
-      ggplot(aes(names.occurences., occurences)) +
+      ggplot(aes(names.DTM., DTM)) +
       geom_col() +
       labs(x = "Terms",
            y = "Frequencies") +
@@ -48,7 +42,7 @@ ToChart  = function(DTF){
     DTF %>%
       select(everything()) %>%
       head(amount) %>%
-      ggplot(aes(names.occurences., occurences)) +
+      ggplot(aes(names.DTM., DTM)) +
       geom_col(fill = choice) +
       labs(x = "Terms",
            y = "Frequencies") +

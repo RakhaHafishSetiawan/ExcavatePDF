@@ -1,48 +1,43 @@
-FrameAndMatrix = function(Insert_Directory) {
-
+FrameAndMatrix = function(Directory, Language) {
   if (!require("tm"))
     install.packages("tm")
   library(tm, quietly = TRUE)
 
-  if (!require("dplyr"))
-    install.packages("dplyr")
-  library(dplyr, quietly = TRUE)
+  if (!require("magrittr"))
+    install.packages("magrittr")
+  library(magrittr, quietly = TRUE)
 
   if (!require("pdftools"))
     install.packages("pdftools")
   library(pdftools, quietly = TRUE)
 
-  if (!require("dplyr"))
-    install.packages("dplyr")
-  library(dplyr, quietly = TRUE)
-
   library(tm)
   library(pdftools)
-  library(dplyr)
+  library(magrittr)
 
-  text <- pdf_text(Insert_Directory)
+  textCorpus <- Corpus(VectorSource(pdf_text(Directory))) %>%
+    tm_map(tolower) %>%
+    tm_map(removePunctuation) %>%
+    tm_map(stripWhitespace) %>%
+    tm_map(removeNumbers)
 
-  textCorpus <<- Corpus(VectorSource(text))
+  decision <<- readline(prompt = "English or not? ")
 
-  textCorpus <<- tm_map(textCorpus, tolower)
-  textCorpus <<- tm_map(textCorpus, removePunctuation)
-  textCorpus <<- tm_map(textCorpus, stripWhitespace)
-  textCorpus <<- tm_map(textCorpus, removeNumbers)
-  textCorpus <<- tm_map(textCorpus, removeWords, stopwords("en"))
+  if (decision == "English") {
+    textCorpus <- tm_map(textCorpus, removeWords, stopwords("en"))
+  } else {
+    textCorpus <- tm_map(textCorpus, removeWords, stopwords(Language))
+  }
 
+  DTM <<- textCorpus %>%
+    DocumentTermMatrix() %>%
+    as.matrix() %>%
+    t() %>%
+    rowSums() %>%
+    sort(decreasing = TRUE)
 
-  DTM <<- DocumentTermMatrix(textCorpus)
-  DTM <<- as.matrix(DTM)
-  DTM <<- t(DTM)
-
-  occurences <<- rowSums(DTM)
-  occurences <<- sort(occurences, decreasing = TRUE)
-
-  DTF <<- data.frame(names(occurences), occurences)
+  DTF <<- data.frame(names(DTM), DTM)
 
   View(DTF)
-  View(occurences)
-
-  print("The data frame and data matrix has been stored in your global environment as DTF and occurences")
-
+  View(DTM)
 }
